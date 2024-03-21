@@ -1,11 +1,7 @@
-const express = require('express')
-const app = express()
-const port = 8080
+/* importa as configurações do servidor */
+import app from './config/server.js';
 
-app.get('/', (req, res) => {
-  res.send('Hello Helbert, lets go projeto TEIA 2024!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+/* parametriza a porta de escuta */
+app.listen(8080, () => {
+	console.log('API online');
+});
