@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(helmet());
-app.use(compression())
+app.use(compression());
 
 /* efetua o load das rotas */
 app.use('/', router);

@@ -1,7 +1,11 @@
 
 export const checkIsPalindrome = (texto) => {
+
+    // Remover espaços em branco e torna minúsculas
+    const regex = /\s+/g;
+    const textoSanitizado = texto.toLowerCase().replace(regex, '');
     
-    // Comparar a string original com sua reversão
-    return texto === texto.split('').reverse().join('');
+    // Compara a string original com sua reversão
+    return textoSanitizado === texto.split('').reverse().join('');
 
 }
