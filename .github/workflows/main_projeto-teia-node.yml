@@ -56,7 +56,7 @@ jobs:
         run: unzip release.zip
       
       - name: Login to Azure
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F1A57F3843354DF6ADF566F56D38CF58 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6B0432CA033B43E5A48190D09076133B }}
@@ -64,7 +64,7 @@ jobs:
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'projeto-teia-node'
           slot-name: 'Production'
